@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="MainFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdg.link_discovery.framework.gui.desktop.controllers.MainController">
+   <children>
+      <MenuBar layoutY="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <Menu mnemonicParsing="false" text="New">
+                    <items>
+                    <MenuItem fx:id="datasetsNewButton" mnemonicParsing="false" onAction="#datasetsNewButtonClicked" text="New Dataset" />
+                        <MenuItem fx:id="algorithmsNewButton" mnemonicParsing="false" onAction="#algorithmsNewButtonClicked" text="New Algorithm" />
+                        <MenuItem fx:id="environmentsNewButton" mnemonicParsing="false" onAction="#environmentsNewButtonClicked" text="New Environmetnt" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Import">
+                    <items>
+                        <MenuItem fx:id="importTDBButton" mnemonicParsing="false" onAction="#importTDBCliked" text="Import TDB Dataset" />
+                        <MenuItem fx:id="importAlgorithmButton" mnemonicParsing="false" onAction="#importAlgorithmClicked" text="Import Algorithm" />
+                        <MenuItem fx:id="importEnvironmentButton" mnemonicParsing="false" onAction="#importEnvironmentClicked" text="Import Environment" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#exitButtonClicked" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="datasetsEditButton" mnemonicParsing="false" onAction="#openDatasetsMangaerView" text="Datasets" />
+              <MenuItem fx:id="algorithmsEditButton" mnemonicParsing="false" onAction="#openAlgorithmsMangaerView" text="Algorithms" />
+                  <MenuItem fx:id="environmentsEditButton" mnemonicParsing="false" onAction="#environmentsEditClicked" text="Environments" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Other">
+            <items>
+              <MenuItem fx:id="aboutButton" mnemonicParsing="false" onAction="#aboutButtonClicked" text="About" />
+                  <MenuItem fx:id="contactButton" mnemonicParsing="false" onAction="#contactButtonClicked" text="Contact" />
+                  <MenuItem fx:id="helpButton" mnemonicParsing="false" onAction="#helpButtonClicked" text="Help" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+        <tabs>
+            <Tab text="Workspace">
+            	<content>
+                	<fx:include fx:id="experimentsAnchorPanel" source="experimentsTab.fxml" />
+               </content>
+               </Tab>
+            <Tab text="Results analyzer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

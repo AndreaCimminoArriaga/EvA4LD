@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="dataAnchorPanel" minHeight="0.0" minWidth="0.0" onMouseClicked="#disableRemoveButton" prefHeight="182.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdg.link_discovery.framework.gui.desktop.controllers.DatasetsController">
+   <children>
+      <Button fx:id="newDatasetButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#addNewDataset" text="New" />
+      <Label layoutX="20.0" layoutY="56.0" text="Available datasets:" />
+      <Label layoutX="156.0" layoutY="25.0" text="Filter:" />
+      <TextField fx:id="datasetFilterByName" layoutX="202.0" layoutY="20.0" onKeyTyped="#datasetNameFilter" />
+      <ListView fx:id="datasetsList" layoutX="20.0" layoutY="80.0" onMouseClicked="#selectedDataset" prefHeight="339.0" prefWidth="600.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="removeDatasetButton" disable="true" layoutX="72.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#removeCurrentDataset" text="Remove" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

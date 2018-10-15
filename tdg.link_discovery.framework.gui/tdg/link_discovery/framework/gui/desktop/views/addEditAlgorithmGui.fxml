@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="541.0" maxWidth="751.0" minHeight="299.0" minWidth="348.0" prefHeight="457.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdg.link_discovery.framework.gui.desktop.controllers.AlgorithmsAddController">
+   <children>
+      <Label layoutX="39.0" layoutY="20.0" prefHeight="3.0" prefWidth="64.0" text="Initializer:" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="50.0" layoutY="57.0" text="Selector:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="57.0" />
+      <Label layoutX="21.0" layoutY="93.0" text="Replacement:" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="93.0" />
+      <Label layoutX="57.0" layoutY="129.0" text="Fitness:" AnchorPane.leftAnchor="57.0" AnchorPane.topAnchor="129.0" />
+      <Label layoutX="39.0" layoutY="165.0" text="Crossover:" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="165.0" />
+      <Label layoutX="44.0" layoutY="202.0" text="Mutation:" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="202.0" />
+      <ComboBox fx:id="initializerComboBox" layoutX="113.0" layoutY="15.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="113.0" AnchorPane.topAnchor="15.0" />
+      <ComboBox fx:id="selectorComboBox" layoutX="114.0" layoutY="52.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="114.0" AnchorPane.topAnchor="52.0" />
+      <ComboBox fx:id="replacementComboBox" layoutX="115.0" layoutY="88.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="88.0" />
+      <ComboBox fx:id="fitnessComboBox" layoutX="115.0" layoutY="124.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="124.0" />
+      <ComboBox fx:id="crossoverComboBox" layoutX="115.0" layoutY="160.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="160.0" />
+      <ComboBox fx:id="mutationComboBox" layoutX="115.0" layoutY="197.0" onAction="#checkValidInput" prefHeight="26.0" prefWidth="241.0" promptText="-" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="197.0" />
+      <Separator layoutX="3.0" layoutY="246.0" prefHeight="3.0" prefWidth="342.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="cancelButton" layoutX="274.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#cancelButtonClicked" text="Cancel" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="nextButton" disable="true" layoutX="216.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#nextButtonClicked" text="Finish" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="84.0" />
+      <Label layoutX="64.0" layoutY="237.0" text="Name:" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="237.0" />
+      <TextField fx:id="algorithmNameInput" layoutX="115.0" layoutY="232.0" onKeyPressed="#algorithmNameTyped" prefHeight="26.0" prefWidth="241.0" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="232.0" />
+      <Label fx:id="errorNameAlreadyExists" layoutX="11.0" layoutY="292.0" text="Algorithm name already exists!" textFill="RED" visible="false" />
+      <Separator layoutX="385.0" layoutY="6.0" orientation="VERTICAL" prefHeight="471.0" prefWidth="6.0" AnchorPane.bottomAnchor="59.0" AnchorPane.topAnchor="6.0" />
+      <ListView fx:id="aggregateList" layoutX="115.0" layoutY="269.0" prefHeight="104.0" prefWidth="241.0" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="269.0" />
+      <ListView fx:id="metricsList" layoutX="409.0" layoutY="41.0" prefHeight="104.0" prefWidth="241.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="41.0" />
+      <Label layoutX="29.0" layoutY="269.0" text="Aggregates:" />
+      <Label layoutX="397.0" layoutY="20.0" text="Metrics:" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="397.0" layoutY="157.0" text="Transformations:" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="157.0" />
+      <ListView fx:id="transformationsList" layoutX="383.0" layoutY="183.0" prefHeight="104.0" prefWidth="241.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="183.0" />
+      <ComboBox fx:id="attrLearnerComboBox" layoutX="411.0" layoutY="325.0" prefHeight="26.0" prefWidth="241.0" AnchorPane.leftAnchor="411.0" AnchorPane.topAnchor="325.0" />
+      <Label layoutX="397.0" layoutY="300.0" text="Attribute matcher:" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="300.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="experimentsAnchorPanel" onMouseClicked="#experimentsAnchorPanelClicked" prefHeight="506.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdg.link_discovery.framework.gui.desktop.controllers.ExperimentsController">
+   <children>
+      <ListView fx:id="algorithmsList" layoutX="32.0" layoutY="45.0" prefHeight="129.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="32.0" layoutY="25.0" text="Algorithms" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <ListView fx:id="environmentsList" layoutX="226.0" layoutY="40.0" prefHeight="129.0" prefWidth="208.0" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="230.0" layoutY="20.0" text="Environments" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="659.0" layoutY="40.0" text="Space reduction:" AnchorPane.topAnchor="40.0" />
+      <CheckBox fx:id="pruneStrMetricsCheckbox" layoutX="669.0" layoutY="60.0" mnemonicParsing="false" text="Prune string metrics" AnchorPane.topAnchor="60.0" />
+      <CheckBox fx:id="strTransformationsCheckbox" layoutX="669.0" layoutY="82.0" mnemonicParsing="false" text="Apply string transformations as stack" AnchorPane.topAnchor="82.0" />
+      <CheckBox fx:id="attrSelectorCheckbox" layoutX="669.0" layoutY="106.0" mnemonicParsing="false" text="Attribute selector and pruner" AnchorPane.topAnchor="106.0" />
+      <CheckBox fx:id="contextNodesCheckbox" layoutX="671.0" layoutY="151.0" mnemonicParsing="false" text="Include context nodes" AnchorPane.topAnchor="151.0" />
+      <TableView fx:id="tableOfExperiments" layoutX="32.0" layoutY="245.0" onMouseClicked="#tableOfExperimentsClicked" prefHeight="207.0" prefWidth="811.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="245.0">
+         <columns>
+            <TableColumn fx:id="algorithmColumn" prefWidth="90.0" text="Algorithm" />
+            <TableColumn fx:id="environmentColumn" prefWidth="100.0" text="Environment" />
+            <TableColumn fx:id="executionsColumn" prefWidth="90.0" text="Executions" />
+            <TableColumn fx:id="pruneMetricsColumn" prefWidth="110.0" text="Prune Metrics" />
+            <TableColumn fx:id="stringTransformationsColumn" prefWidth="170.0" text="String Transformations" />
+            <TableColumn fx:id="attributeSelectorColumn" prefWidth="135.0" text="Attribute selector" />
+            <TableColumn fx:id="contextColumn" prefWidth="115.0" text="Context" />
+         </columns>
+      </TableView>
+      <Label layoutX="22.0" layoutY="219.0" text="Table of experiments" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="219.0" />
+      <Button fx:id="addExperimentButton" layoutX="152.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#addExperimentButtonClicked" text="Add" AnchorPane.leftAnchor="152.0" AnchorPane.topAnchor="184.0" />
+      <Button fx:id="startExperimentsButton" layoutX="178.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#startExperimentsButtonClicked" text="Run experiments" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="178.0" />
+      <Button fx:id="cancelButton" layoutX="316.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#cancelButtonClicked" text="Cancel" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="316.0" />
+      <ProgressBar fx:id="progressBar" layoutX="388.0" layoutY="379.0" prefHeight="20.0" prefWidth="443.0" progress="0.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="removeExperimentRow" layoutX="205.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#removeExperimentRow" text="Remove" AnchorPane.leftAnchor="205.0" AnchorPane.topAnchor="184.0" />
+      <TextField fx:id="executionNumberInput" layoutX="102.0" layoutY="184.0" prefHeight="26.0" prefWidth="37.0" text="1" AnchorPane.leftAnchor="102.0" AnchorPane.topAnchor="184.0" />
+      <Label layoutX="22.0" layoutY="189.0" text="Executions:" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="189.0" />
+      <CheckBox fx:id="executeInParallelCheckBox" layoutX="21.0" layoutY="378.0" mnemonicParsing="false" text="Execute in parallel" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="21.0" />
+      <ListView fx:id="evaluatorsList" layoutX="440.0" layoutY="40.0" prefHeight="129.0" prefWidth="208.0" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="444.0" layoutY="20.0" text="Evaluators" />
+      <Label layoutX="658.0" layoutY="130.0" text="Precision improver:" />
+   </children>
+</AnchorPane>

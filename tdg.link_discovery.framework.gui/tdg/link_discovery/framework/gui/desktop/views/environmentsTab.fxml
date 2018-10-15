@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="environmentsPanel" onMouseClicked="#anchorPanelEnvironmentClicked" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tdg.link_discovery.framework.gui.desktop.controllers.EnvironmentsController">
+   <children>
+      <TableView fx:id="environmentsTable" layoutX="40.0" layoutY="43.0" prefHeight="400.0" prefWidth="978.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="47.0" text="Name" />
+            <TableColumn fx:id="sourceColumn" prefWidth="62.0" text="Source" />
+            <TableColumn fx:id="targetColumn" prefWidth="59.0" text="Target" />
+          <TableColumn fx:id="goldStdColumn" prefWidth="71.0" text="Gold Std" />
+            <TableColumn fx:id="examplesColumn" prefWidth="77.0" text="Examples" />
+            <TableColumn fx:id="attributeColumns" prefWidth="149.0" text="Attributes">
+               <columns>
+                  <TableColumn fx:id="attributesSourceColumn" prefWidth="75.0" text="Source" />
+                  <TableColumn fx:id="attributesTargetColumn" prefWidth="75.0" text="Target" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="restrictionsColumn" prefWidth="151.0" text="Restrictions">
+               <columns>
+                  <TableColumn fx:id="restrictionsSourceColumn" prefWidth="75.0" text="Source" />
+                  <TableColumn fx:id="restrictionsTargetColumn" prefWidth="75.0" text="Target" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="outputsColumn" prefWidth="320.0" text="Outputs">
+               <columns>
+                  <TableColumn fx:id="outputsStatsColumn" prefWidth="116.0" text="Stats" />
+                  <TableColumn fx:id="outputsSpecificationsColumn" prefWidth="122.0" text="Specifications" />
+                  <TableColumn fx:id="outputsLinksColumn" prefWidth="83.0" text="Links" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="newEnvironmentButton" layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#newEnvironmentClicked" text="+" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="environmentSearchBar" layoutX="93.0" layoutY="20.0" onKeyTyped="#environmentSearchTyped" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="20.0" />
+      <Button fx:id="removeEnvironmentButton" layoutX="58.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#removeEnvironmentClicked" text="-" AnchorPane.leftAnchor="58.0" AnchorPane.topAnchor="20.0" />
+      <CheckBox fx:id="showDatasetsCheckbox" layoutX="315.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showDatasetsClicked" text="Datasets" />
+      <Label layoutX="264.0" layoutY="25.0" text="Hide:" />
+      <CheckBox fx:id="showGoldStdCheckbox" layoutX="403.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showGoldStdClicked" text="Gold Std" />
+      <CheckBox fx:id="showExamplesCheckbox" layoutX="491.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showExamplesClicked" text="Examples" />
+      <CheckBox fx:id="showAttributesCheckbox" layoutX="584.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showattributesClicked" text="Attributes" />
+      <CheckBox fx:id="showRestrictionsCheckbox" layoutX="681.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showRestrictionsClicked" text="Restrictions" />
+      <CheckBox fx:id="showOutputsCheckbox" layoutX="788.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#showOutputsClicked" text="Output files" />
+   </children>
+</AnchorPane>
